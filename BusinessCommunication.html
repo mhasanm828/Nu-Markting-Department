@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Department Video Class</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .video-preview {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6"> 
+      <center>         <h1>Course Code: 222301 Business Communication (In English)</h1>
+
+        
+        
+           <div class="col-md-6">
+        <h3>Video </h3>
+        <div id="videoPreview">
+          <!-- Video Preview will be loaded here -->
+        </div>
+        </center>
+
+        
+        <ul id="lectureList">
+          <li><a href="#" onclick="showVideo('222301-001')">Lecture 1</a></li>
+          <li><a href="#" onclick="showVideo('222301-002')">Lecture 2</a></li>
+          <li><a href="#" onclick="showVideo('222301-003')">Lecture 3</a></li>
+          <li><a href="#" onclick="showVideo('222301-004')">Lecture 4</a></li>
+          <li><a href="#" onclick="showVideo('222301-005')">Lecture 5</a></li>
+          <li><a href="#" onclick="showVideo('222301-006')">Lecture 6</a></li>
+          <li><a href="#" onclick="showVideo('222301-007')">Lecture 7</a></li>
+          <li><a href="#" onclick="showVideo('222301-008')">Lecture 8</a></li>
+          <li><a href="#" onclick="showVideo('222301-009')">Lecture 9</a></li>
+          <li><a href="#" onclick="showVideo('222301-010')">Lecture 10</a></li>
+          <li><a href="#" onclick="showVideo('222301-011')">Lecture 11</a></li>
+          <li><a href="#" onclick="showVideo('222301-012')">Lecture 12</a></li>
+          <li><a href="#" onclick="showVideo('222301-013')">Lecture 13</a></li>
+          <li><a href="#" onclick="showVideo('222301-014')">Lecture 14</a></li>
+          <li><a href="#" onclick="showVideo('222301-015')">Lecture 15</a></li>
+        </ul>
+       
+      </div>
+   
+   
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript for Link Preview -->
+  <script>
+    function showVideo(lectureId) {
+      const videoUrl = `http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/${lectureId}.mp4`;
+
+      // Update the video preview element
+      const videoPreview = document.getElementById('videoPreview');
+      videoPreview.innerHTML = `
+        <video controls class="video-preview">
+          <source src="${videoUrl}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+    }
+  </script>
+</body>
+
+</html>
