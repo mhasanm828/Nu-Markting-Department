@@ -7,8 +7,8 @@
     <title>Marketing Department Video Class</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         .video-preview {
@@ -25,22 +25,14 @@
                 <center>
                     <h1>Course Code: 222301 Business Communication (In English)</h1>
                     <div class="col-md-6">
-                        <h3>Video</h3>
-                        <div id="videoPreview">
-                            <!-- Video Preview will be loaded here -->
-                            <div id="my-player" data-plyr-provider="html" data-plyr-embed-id="" class="plyr">
-                                <video controls crossorigin>
-                                    <source src="" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </center>
+                       
+                      
                 <ul id="lectureList">
-                    <li><a href="#" onclick="showVideo('222301-001')">Lecture 1</a></li>
-                    <li><a href="#" onclick="showVideo('222301-002')">Lecture 2</a></li>
-                    <!-- Add more lecture links as needed -->
+                    <li><a href="http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/222301-007.mp4">Lecture  1</a></li>
+                    <li><a href="http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/222301-007.mp4">Lecture 2</a></li>
+                   <li><a href="http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/222301-007.mp4">Lecture 3</a></li>
+                    <li><a href="http://onlinelecture.nu.ac.bd/dashboard/upload/2/23/222301-007.mp4">Lecture 4</a></li>
+                   <!-- Add more lecture links as needed --> 
                 </ul>
             </div>
         </div>
@@ -49,34 +41,12 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <!-- Plyr JS -->
-    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+    <!-- Video.js -->
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
 
     <!-- Custom JavaScript for Link Preview -->
-    <script>
-        function showVideo(lectureId) {
-            const videoUrl = `https://onlinelecture.nu.ac.bd/dashboard/upload/2/23/${lectureId}.mp4`;
-
-            // Remove existing Plyr player instance if present
-            if (window.player) {
-                window.player.destroy();
-            }
-
-            // Initialize Plyr
-            window.player = new Plyr('#my-player', {});
-
-            // Set the video source
-            const source = {
-                type: 'video',
-                sources: [{
-                    src: videoUrl,
-                    type: 'video/mp4',
-                }],
-            };
-
-            window.player.source = source;
-        }
-    </script>
+   
+  
 </body>
 
 </html>
