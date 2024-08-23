@@ -6,15 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Video Classes</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background-color: #0056b3;
+      border-color: #004080;
+    }
+
+    .btn-primary:hover {
+      background-color: #004080;
+      border-color: #003366;
+    }
+
+    .navbar {
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Online Video Classes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://colfiles.bmcollege.gov.bd/uploads/notices/4f5c1be582.pdf">Syllabus</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="https://nu-markting-dep.vercel.app/previous-question.html">Previous Question</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container mt-5">
-    <h1 class="text-center">Online Video Classes</h1>
-    <center> <a href="http://colfiles.bmcollege.gov.bd/uploads/notices/4f5c1be582.pdf"> See Second Year Syllabus</a> </center>
-    <div class="row mt-3">
-      <div class="col-md-6">
+    <h1 class="text-center mb-4">Online Video Classes</h1>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Business Communication (In English)</h5>
@@ -23,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Fundamentals of Finance</h5>
@@ -32,9 +76,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Business Statistics-I (In English)</h5>
@@ -43,18 +85,16 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Business Mathematics</h5>
             <p class="card-text">Course Code: 222307</p>
-            <a href=" BusinessMathematics.html" class="btn btn-primary">View Class</a>
+            <a href="BusinessMathematics.html" class="btn btn-primary">View Class</a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Insurance and Risk Management</h5>
@@ -63,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Micro Economics</h5>
@@ -72,9 +112,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Agricultural Marketing</h5>
@@ -88,7 +126,7 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
