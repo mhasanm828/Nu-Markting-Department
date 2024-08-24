@@ -17,18 +17,105 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .btn-primary {
-      background-color: #0056b3;
-      border-color: #004080;
+    /* Slider Styles */
+    .slider-container {
+      position: relative;
+      margin: 20px auto;
+      max-width: 800px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
     }
 
-    .btn-primary:hover {
-      background-color: #004080;
-      border-color: #003366;
+    .slide {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.5s ease;
     }
 
-    .navbar {
-      margin-bottom: 2rem;
+    .slide.active {
+      display: block;
+    }
+
+    /* Background Colors */
+    .slide-1 { background-color: #3498db; }
+    .slide-2 { background-color: #2ecc71; }
+    .slide-3 { background-color: #f39c12; }
+    .slide-4 { background-color: #e74c3c; }
+    .slide-5 { background-color: #8e44ad; }
+    .slide-6 { background-color: #16a085; }
+    .slide-7 { background-color: #d35400; }
+
+    .btn-slider {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .btn-slider.prev {
+      left: 10px;
+    }
+
+    .btn-slider.next {
+      right: 10px;
+    }
+
+    .btn-slider:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .navbar-nav {
+        text-align: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 5px 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+
+      .btn-slider {
+        padding: 8px;
+      }
+    }
+
+    /* Card List Layout */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .card-container .card {
+      margin: 10px;
+      flex: 1 1 100%;
+    }
+
+    @media (min-width: 768px) {
+      .card-container .card {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .card-container .card {
+        flex: 1 1 30%;
+      }
     }
   </style>
 </head>
@@ -36,89 +123,120 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Online Video Classes</a>
+    <a class="navbar-brand" href="#">Video Classes</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/2nd-syllabus.pdf">Syllabus</a>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="https://nu-markting-dep.vercel.app/previous-question.html">Previous Question</a>
         </li>
       </ul>
     </div>
   </nav>
 
+  <!-- Slider Section -->
+  <section class="container mt-5">
+    <h1 class="text-center mb-4"> Brief Questions</h1>
+   <div class="slider-container">
+    <div class="slide slide-1 active">
+      <h3>Business Communication</h3>
+      <p>(222301)</p>
+      
+      <a href="#" class="btn btn-primary">Download</a>
+    </div>
+    <div class="slide slide-2">
+      <h3>Fundamentals of Finance</h3>
+      <p>(222303)</p>
+      <a href="#" class="btn btn-danger">Download</a>
+    </div>
+    <div class="slide slide-3">
+      <h3>Business Statistics-I (In English)</h3>
+      <p>(222305)</p>
+      <a href="#" class="btn btn-dark">Download</a>
+    </div>
+    <div class="slide slide-4">
+      <h3>Business Mathematics</h3>
+      <p>(222307)</p>
+    <a href="#" class="btn btn-success">Download</a>
+    </div>
+    <div class="slide slide-5">
+      <h3>Insurance and Risk Management</h3>
+      <p>(222309)</p>
+      <a href="#" class="btn btn-primary">Download</a>
+    </div>
+    <div class="slide slide-6">
+      <h3>Micro Economics</h3>
+      <p>(222311)</p>
+        <a href="https%3A%2F%2Fz-p3-lookaside.fbsbx.com%2Ffile%2FM_economics_brief_01723477809.pdf%3Ftoken%3DAWxXckiO-Ns2Mt5xmozAZzeGwVSceUEbv6WS8GaTDW8gJYnidFEbfNhAHxmj_x1jO4IjS7jpcLaVKjFq14OPDQegdyfnzpj-LKyJENVP6yqnTSsRymyfQdsOJdMs4YDCLxy6PmVfPaceztf7oFlu_a6_zvq45np8j7WUulbUzu8i-BLVb9NsVaGh27N7q9brGz8MwyvSImajBlBcOxoGKFpXHDT-cFMc3DGAFOS2tQJcFpzJHZBeDuq6r6g2LBPq8RQxaDWKrKnj4rpjaNDkyERS%26fbclid%3DIwZXh0bgNhZW0CMTEAAR0ybs2YRKuMQ8ssYIxSFaloNLGdqC3lSk5VxHYhH2kl2erVDMB60yzFKyM_aem_IQ_lUSAoKh5X1kuABCsXfQ&h=AT0R-euo0kWNmrYs_BmEPouRAuE4KBwi9VgUJg1lSUGlA0clzQVGUVXY54DSynym5pMeiWapIM6rUOB3juJwN6Nj7zTVQt0SxbMiYseiJNkiuvwWd_3x85C6gktowNM0Gvb3z4DC1pyVi4fAML3KE5CqKi-4PA" class="btn btn-primary">Download</a>
+    </div>
+    <div class="slide slide-7">
+      <h3>Agricultural Marketing</h3>
+      <p>(222313)</p>
+           <a href="#" class="btn btn-primary">Download</a>
+    </div>
+    <button class="btn-slider prev">&lt; 👈</button>
+    <button class="btn-slider next">👉 &gt;</button>
+  </section><br><br><br>
+
+  <!-- Online Video Classes Section -->
   <div class="container mt-5">
     <h1 class="text-center mb-4">Online Video Classes</h1>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Business Communication (In English)</h5>
-            <p class="card-text">Course Code: 222301</p>
-            <a href="BusinessCommunication.html" class="btn btn-primary">View Class</a>
-          </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Business Communication (In English)</h5>
+          <p class="card-text">Course Code: 222301</p>
+          <a href="BusinessCommunication.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Fundamentals of Finance</h5>
-            <p class="card-text">Course Code: 222303</p>
-            <a href="FundamentalsofFinance.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Fundamentals of Finance</h5>
+          <p class="card-text">Course Code: 222303</p>
+          <a href="FundamentalsofFinance.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Business Statistics-I (In English)</h5>
-            <p class="card-text">Course Code: 222305</p>
-            <a href="BusinessStatistics.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Business Statistics-I (In English)</h5>
+          <p class="card-text">Course Code: 222305</p>
+          <a href="BusinessStatistics.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Business Mathematics</h5>
-            <p class="card-text">Course Code: 222307</p>
-            <a href="BusinessMathematics.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Business Mathematics</h5>
+          <p class="card-text">Course Code: 222307</p>
+          <a href="BusinessMathematics.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Insurance and Risk Management</h5>
-            <p class="card-text">Course Code: 222309</p>
-            <a href="RiskManagement.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Insurance and Risk Management</h5>
+          <p class="card-text">Course Code: 222309</p>
+          <a href="RiskManagement.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Micro Economics</h5>
-            <p class="card-text">Course Code: 222311</p>
-            <a href="MicroEconomics.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Micro Economics</h5>
+          <p class="card-text">Course Code: 222311</p>
+          <a href="MicroEconomics.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Agricultural Marketing</h5>
-            <p class="card-text">Course Code: 222313</p>
-            <a href="agriculture.html" class="btn btn-primary">View Class</a>
-          </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Agricultural Marketing</h5>
+          <p class="card-text">Course Code: 222313</p>
+          <a href="agriculture.html" class="btn btn-primary">View Class</a>
         </div>
       </div>
     </div>
@@ -126,7 +244,45 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for Slider -->
+  <script>
+    let currentSlide = 0;const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.btn-slider.prev');
+    const nextBtn = document.querySelector('.btn-slider.next');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize the first slide
+    showSlide(currentSlide);
+  </script>
 </body>
 
 </html>
