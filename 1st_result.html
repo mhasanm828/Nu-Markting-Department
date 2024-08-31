@@ -13,11 +13,6 @@
             height: 150px;
             width: 150px;
         }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100px;
-        }
     </style>
 </head>
 <body class="bg-light">
@@ -27,8 +22,8 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body text-center">
-                        <img src="/nu_logo.png" alt="NU Logo"> <!-- Host the NU logo locally -->
-                        <h3 class="card-title">NU Honours 1st year Result</h3>
+                        <img src="http://ems.nu.ac.bd/img/nu_logo_r.53c3c0be.png" alt="NU Logo"> <!-- NU logo -->
+                        <h3 class="card-title">NU Honours 1st Year Result</h3>
 
                         <!-- Form starts here -->
                         <form onsubmit="openResultPopup(event)">
@@ -51,9 +46,9 @@
                                 <input type="text" class="form-control" id="exam_year" name="exam_year" value="2022">
                             </div>
 
-                            <!-- CAPTCHA Image inside an iframe -->
+                            <!-- CAPTCHA Image -->
                             <div class="mb-3">
-                                <iframe id="captcha_iframe" src="http://results.nu.ac.bd/captcha_code_file.php?rand=<?php echo rand(); ?>"></iframe>
+                                <img id="captcha_img" src="http://results.nu.ac.bd/captcha_code_file.php?rand=<?= rand(); ?>" alt="CAPTCHA" class="img-fluid mb-3">
                                 <small><a href="#" onclick="refreshCaptcha()">Refresh CAPTCHA</a></small>
                             </div>
 
@@ -74,6 +69,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Footer -->
     <footer class="py-4">
         <div class="container">
@@ -97,7 +93,8 @@
         }
 
         function refreshCaptcha() {
-            document.getElementById('captcha_iframe').src = 'http://results.nu.ac.bd/captcha_code_file.php?rand=' + Math.random();
+            const captchaImage = document.getElementById('captcha_img');
+            captchaImage.src = `http://results.nu.ac.bd/captcha_code_file.php?rand=${Math.random()}`;
         }
     </script>
 
