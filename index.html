@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Video Classes</title>
+  <title>Marketing Department Resources</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -17,41 +17,6 @@
       text-align: center;
       border-radius: 0 0 40px 40px;
     }
-    .slider-container {
-      margin: 30px auto;
-      max-width: 900px;
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .slide {
-      display: none;
-      padding: 40px;
-      text-align: center;
-      color: white;
-      font-size: 1.3rem;
-      transition: all 0.5s ease-in-out;
-    }
-    .slide.active {
-      display: block;
-    }
-    .slide h3 {
-      font-size: 1.75rem;
-    }
-    .btn-slider {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      border: none;
-      padding: 10px 15px;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-    .btn-slider.prev { left: 10px; }
-    .btn-slider.next { right: 10px; }
     .card-container {
       display: grid;
       gap: 20px;
@@ -67,177 +32,173 @@
     .card:hover {
       transform: translateY(-5px);
     }
+    .btn-group-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .btn-group-card .btn {
+      width: 100%;
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Video Classes</a>
+      <a class="navbar-brand" href="#">Marketing Department</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="http://ems.nu.ac.bd/student-login">From Fill-up</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://nu-markting-dep.vercel.app/from-download.html">From Fill-up</a></li>
           <li class="nav-item"><a class="nav-link" href="/2nd-syllabus.pdf">Syllabus</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://nu-markting-dep.vercel.app/previous-question.html">Previous Question</a></li>
-          <li class="nav-item"><a class="nav-link" href="http://results.nu.ac.bd/"> Result</a></li>
-         <li class="nav-item"><a class="nav-link" href="https://www.nu.ac.bd/recent-news-notice.php"> NU Notice </a></li>
-
-
+          <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://nu-markting-dep.vercel.app/1st_result.html">1st Year Result</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="hero-section">
-    <h1>Brief Questions</h1>
-    <p>Click below to download topic-wise PDFs</p>
+    <h1>Marketing Department Resources</h1>
+    <p>All study materials in one place</p>
   </div>
 
-  <div class="slider-container bg-white">
-    <div class="slide slide-1 active" style="background-color:#3498db">
-      <h3>Business Communication</h3>
-      <a href="Communication_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-2" style="background-color:#2ecc71">
-      <h3>Fundamentals of Finance</h3>
-      <a href="Finance_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-3" style="background-color:#f39c12">
-      <h3>Business Statistics-I</h3>
-      <a href="Statistics_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-4" style="background-color:#e74c3c">
-      <h3>Business Mathematics</h3>
-      <a href="Math_brief_017234778.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-5" style="background-color:#8e44ad">
-      <h3>Insurance and Risk Management</h3>
-      <a href="Insurance_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-6" style="background-color:#16a085">
-      <h3>Micro Economics</h3>
-      <a href="/M_economics_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <div class="slide slide-7" style="background-color:#d35400">
-      <h3>Agricultural Marketing</h3>
-      <a href="Agriculture_brief_01723477809.pdf" class="btn btn-light mt-3">Download</a>
-    </div>
-    <button class="btn-slider prev">&#10094;</button>
-    <button class="btn-slider next">&#10095;</button>
-  </div>
+  <!-- Consolidated Resources Section -->
+  <section class="container my-5" id="resources">
+    <h2 class="text-center mb-4">Marketing Department Resources</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Online Video Classes</h2>
-    <div class="card-container">
-      <div class="card text-center p-3">
-        <h5>Business Communication</h5>
-        <a href="BusinessCommunication.html" class="btn btn-outline-primary mt-2">View Class</a>
+      <!-- Business Communication -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/5n2mrxL/Business-Communication-Exam-17-22-Hasan-01723477809-1.jpg" class="card-img-top" alt="Business Communication">
+          <div class="card-body">
+            <h5 class="card-title">Business Communication</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Business Communication {Exam 17-22}Hasan • 01723477809.pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Communication_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="BusinessCommunication.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card text-center p-3">
-        <h5>Fundamentals of Finance</h5>
-        <a href="FundamentalsofFinance.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-      <div class="card text-center p-3">
-        <h5>Business Statistics-I</h5>
-        <a href="BusinessStatistics.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-      <div class="card text-center p-3">
-        <h5>Business Mathematics</h5>
-        <a href="BusinessMathematics.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-      <div class="card text-center p-3">
-        <h5>Insurance and Risk Management</h5>
-        <a href="RiskManagement.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-      <div class="card text-center p-3">
-        <h5>Micro Economics</h5>
-        <a href="MicroEconomics.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-      <div class="card text-center p-3">
-        <h5>Agricultural Marketing</h5>
-        <a href="agriculture.html" class="btn btn-outline-primary mt-2">View Class</a>
-      </div>
-    </div>
-  </div>
 
-  
+      <!-- Business Statistics -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/CzYQnYN/B-Statistics-Exam-17-22-Hasan-01723477809-1.jpg" class="card-img-top" alt="Business Statistics">
+          <div class="card-body">
+            <h5 class="card-title">Business Statistics-I</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/B. Statistics {Exam-17-22} Hasan•01723477809 .pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Statistics_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="BusinessStatistics.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agriculture Marketing -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/4708577/Agriculture-Markting-E-Question-17-22-Hasan-0172347780907-1.jpg" class="card-img-top" alt="Agriculture Marketing">
+          <div class="card-body">
+            <h5 class="card-title">Agricultural Marketing</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Agriculture Markting{ E- Question 17 -22 } . Hasan (0172347780907).pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Agriculture_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="agriculture.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro Economic -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/KwgqsQ2/Micro-Economic-Ex-Q-16-22-Hasan-01723477809-1.jpg" class="card-img-top" alt="Micro Economic">
+          <div class="card-body">
+            <h5 class="card-title">Micro Economics</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Micro Economic {Ex Q 16-22} Hasan •01723477809.pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="/M_economics_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="MicroEconomics.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fundamental Of Finance -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/b78jWGQ/Finance-Ex-Q17-22-Hasan-0172347780907-1.jpg" class="card-img-top" alt="Fundamental Of Finance">
+          <div class="card-body">
+            <h5 class="card-title">Fundamentals of Finance</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Finance%20%7BEx-Q17-22%7D%20Hasan%E2%80%A20172347780907.pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Finance_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="FundamentalsofFinance.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Mathematics -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/tsBhHqC/Business-Mathematics-Hasan-Mahmud-017234778-1.jpg" class="card-img-top" alt="Business Mathematics">
+          <div class="card-body">
+            <h5 class="card-title">Business Mathematics</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Business Math { EX. Q16-22} Hasan - 01723477809.pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Math_brief_017234778.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="BusinessMathematics.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insurance and Risk Management -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.ibb.co/V3LxNZ6/Insurance-And-Risk-Ex-Q-16-22-Hasan-01723477809-1.jpg" class="card-img-top" alt="Insurance and Risk Management">
+          <div class="card-body">
+            <h5 class="card-title">Insurance and Risk Management</h5>
+            <div class="btn-group-card">
+              <a href="https://nu-markting-dep.vercel.app/Insurance%20And%20Risk%20%7B%20Ex%20Q%2016-22%7D%20Hasan%E2%80%A201723477809.pdf" class="btn btn-primary">Previous Questions</a>
+              <a href="Insurance_brief_01723477809.pdf" class="btn btn-outline-secondary">Brief Questions</a>
+              <a href="RiskManagement.html" class="btn btn-outline-primary">Video Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Important Links Section -->
-<section class="container mt-5">
-  <h2 class="text-center mb-4">Important Links</h2>
-  <div class="row text-center">
-    <div class="col-12 col-md-4 mb-3">
-      <a href="https://www.nu.ac.bd/recent-news-notice.php" target="_blank" class="btn btn-outline-primary w-100">📢 NU Notice</a>
-    </div>
-    <div class="col-12 col-md-4 mb-3">
-      <a href="http://results.nu.ac.bd/" target="_blank" class="btn btn-outline-success w-100">🎓 NU Result</a>
-    </div>
-    <div class="col-12 col-md-4 mb-3">
-      <a href="https://bm-marketer.vercel.app/" target="_blank" class="btn btn-outline-dark w-100">🌐 New BM Site</a>
-    </div>
-       <div class="col-12 col-md-4 mb-3">
-      <a href="http://ems.nu.ac.bd/student-login" target="_blank" class="btn btn-outline-dark w-100"> From Fill-up</a>
-    </div>
-  </div>
-</section>
-
-
-
-   <!-- ডেভেলপার -->
-    <div class="card p-4 mb-4 bg-white text-center">
-      <h5 class="text-success">👨‍💻 ডেভেলপার</h5>
-      <h6 class="fw-bold mb-1">MD Hasan Mahmud</h6>
-      <p class="text-muted mb-2">BBA Student, Marketing Dept.<br>Government BM College, Barisal</p>
-      <div>
-        <a href="https://facebook.com/mhasanm828" target="_blank" class="btn btn-sm btn-primary me-2">
-          Facebook
-        </a>
-        <a href="Https://wa.me/+8801723477809" class="btn btn-sm btn-success me-2">
-          WhatsApp 
-        </a>
-        <a href="mailto:mhasanm828@gmail.com" class="btn btn-sm btn-dark">
-          Email
-        </a>
+  <section class="container mt-5">
+    <h2 class="text-center mb-4">Important Links</h2>
+    <div class="row text-center">
+      <div class="col-12 col-md-4 mb-3">
+        <a href="https://www.nu.ac.bd/recent-news-notice.php" target="_blank" class="btn btn-outline-primary w-100">📢 NU Notice</a>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <a href="http://results.nu.ac.bd/" target="_blank" class="btn btn-outline-success w-100">🎓 NU Result</a>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <a href="https://bm-marketer.vercel.app/" target="_blank" class="btn btn-outline-dark w-100">🌐 New BM Site</a>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <a href="http://ems.nu.ac.bd/student-login" target="_blank" class="btn btn-outline-dark w-100">From Fill-up</a>
       </div>
     </div>
+  </section>
 
-
-      <footer class="text-center text-secondary small">
-      © ২০২৩ সরকারী ব্রজমোহন কলেজ - মার্কেটিং বিভাগ | সর্বশেষ আপডেট: ১৮ জুন ২০২৫
-    </footer>
-  </div>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.btn-slider.prev');
-    const nextBtn = document.querySelector('.btn-slider.next');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    setInterval(nextSlide, 5000);
-    showSlide(currentSlide);
-  </script>
 </body>
 </html>
